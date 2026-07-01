@@ -71,3 +71,6 @@ Siga os passos abaixo para rodar o aplicativo localmente em seu ambiente de dese
    ```bash
    git clone [https://github.com/Winycyus/uber-clone.git](https://github.com/Winycyus/uber-clone.git)
    cd uber-clone
+
+
+🛠️ Créditos: Base de início desenvolvida acompanhando o canal do [Sonny Sangha): https://www.youtube.com/@SonnySangha].
