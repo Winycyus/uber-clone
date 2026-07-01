@@ -1,14 +1,36 @@
 import { StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import HomeScreen from './screens/homeScreen'; 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+import HomeScreen from './screens/HomeScreen';
+import MapScreen from './screens/MapScreen'; 
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <Provider store={store}> 
-      <View style={styles.container}>
-        <HomeScreen />
-      </View>
+      <NavigationContainer>
+        <View style={styles.container}>
+          <Stack.Navigator>
+         
+            <Stack.Screen 
+              name="HomeScreen" 
+              component={HomeScreen} 
+              options={{ headerShown: false }} 
+            />
+         
+            <Stack.Screen 
+              name="MapScreen" 
+              component={MapScreen} 
+              options={{ headerShown: false }} 
+            />
+          </Stack.Navigator>
+        </View>
+      </NavigationContainer>
     </Provider>
   );
 }
